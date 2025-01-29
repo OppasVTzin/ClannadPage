@@ -187,14 +187,14 @@ body{
                                             body{
                                                 background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
                                                 background-color: black;
-                                                background-size: 40%;
+                                                background-size: 50%;
                                             
                                                 
                                             }
                                             
                                             #Logo{
                                                 width: 50%;
-                                                margin: 250px 1px;
+                                                margin: 250px 0.1px;
                                             }
                                             }  
                     
