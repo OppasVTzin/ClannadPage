@@ -1,0 +1,188 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    
+}
+
+@media only screen and (max-width:1366px){
+body{
+    background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
+    background-color: black;
+    background-size: 50%;
+
+    
+}
+
+#Logo{
+    margin: 100px 800px;
+}
+}
+
+@media only screen and (max-width:740px) and (orientation:landscape){
+    body{
+        background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
+        background-color: black;
+        background-size: 50%;
+    
+        
+    }
+    
+    #Logo{
+        width: 50%;
+        margin: 100px 360px;
+    }
+    }
+
+@media only screen and (max-width:915px) and (orientation:landscape){
+    body{
+            background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
+            background-color: black;
+            background-size: 50%;
+        
+            
+        }
+        
+    #Logo{
+            width: 50%;
+            margin: 100px 460px;
+        }
+    }
+
+@media only screen and (max-width:1024px) and (orientation:landscape){
+        body{
+            background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
+            background-color: black;
+            background-size: 60%;
+        
+            
+        }
+        
+        #Logo{
+            width: 50%;
+            margin: 256px 512px;
+        }
+        }
+
+@media only screen and (max-width:1180px) and (orientation:landscape){
+            body{
+                background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
+                background-color: black;
+                background-size: 60%;
+            
+                
+            }
+            
+            #Logo{
+                width: 50%;
+                margin: 256px 590px;
+            }
+            }
+
+@media only screen and (max-width:1366px) and (orientation:landscape){
+                body{
+                    background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
+                    background-color: black;
+                    background-size: 70%;
+                
+                    
+                }
+                
+                #Logo{
+                    width: 50%;
+                    margin: 300px 683px;
+                }
+                }
+
+@media only screen and (width:882px) and (orientation:landscape){
+                    body{
+                        background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
+                        background-color: black;
+                        background-size: 40%;
+                    
+                        
+                    }
+                    
+                    #Logo{
+                        width: 50%;
+                        margin: 100px 365px;
+                    }
+                    }
+
+@media only screen and (width:720px) and (orientation:landscape){
+                        body{
+                            background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
+                            background-color: black;
+                            background-size: 70%;
+                        
+                            
+                        }
+                        
+                        #Logo{
+                            width: 40%;
+                            margin: 100px 415px;
+                        }
+                        }
+
+@media only screen and (max-width:320px){
+                            body{
+                                background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
+                                background-color: black;
+                                background-size: 130%;
+                            
+                                
+                            }
+                            
+                            #Logo{
+                                width: 50%;
+                                margin: 10px 150px
+                            }
+                            }
+
+@media only screen and (max-width:425px){
+                                body{
+                                    background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
+                                    background-color: black;
+                                    background-size: 80%;
+                                
+                                    
+                                }
+                                
+                                #Logo{
+                                    width: 50%;
+                                    margin: 75px 180px;
+                                }
+                                }
+@media only screen and (max-width:768px){
+                                    body{
+                                        background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
+                                        background-color: black;
+                                        background-size: 40%;
+                                    
+                                        
+                                    }
+                                    
+                                    #Logo{
+                                        width: 50%;
+                                        margin: 75px 350px;
+                                    }
+                                    }
+@media only screen and (max-width:1024px){
+                                        body{
+                                            background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
+                                            background-color: black;
+                                            background-size: 30%;
+                                        
+                                            
+                                        }
+                                        
+                                        #Logo{
+                                            width: 50%;
+                                            margin: 75px 400px;
+                                        }
+                                        }
+                        
+                    
+                        
+            
