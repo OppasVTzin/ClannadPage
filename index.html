@@ -1,12 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clannad - Landing Page</title>
+    <title>Clannad Fandub Oficial</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img src="Logo.png" id="Logo">
+    <div class="page">
+        <header class="site-header" id="topo">
+            <a class="brand" href="#topo" aria-label="Clannad Fandub Oficial">
+                <img src="Logo.png" alt="Clannad Fandub Oficial" class="logo">
+            </a>
+
+            <nav class="nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#episodios">Episódios</a></li>
+                    <li><a href="#equipe">Equipe</a></li>
+                    <li><a href="#discord">Discord</a></li>
+                </ul>
+            </nav>
+
+            <a class="button button-outline" href="https://discord.gg/mNWJQAfmnJ" target="_blank" rel="noopener noreferrer">Entrar no Discord</a>
+        </header>
+
+        <main>
+            <section class="hero" id="home">
+                <div class="hero-copy">
+                    <span class="eyebrow">Clannad · Fandub Oficial</span>
+                    <h1>Clannad</h1>
+                    <p class="subtitle">
+                        Uma jornada emocional em português, repleta de amizade, perdas e momentos
+                        que ficam no coração.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#episodios">Assistir episódios</a>
+                        <a class="button button-secondary" href="#equipe">Conhecer a equipe</a>
+                    </div>
+
+                    <ul class="hero-metadata" aria-label="Informações do projeto">
+                        <li>
+                            <strong>12</strong>
+                            <span>Episódios</span>
+                        </li>
+                        <li>
+                            <strong>PT-BR</strong>
+                            <span>Legenda</span>
+                        </li>
+                        <li>
+                            <strong>2026</strong>
+                            <span>Release</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hero-card" aria-label="Capa da produção Clannad Fandub">
+                    <img src="BG.jpg" alt="Ilustração de Clannad">
+                    <div class="card-caption">
+                        <span>Projeto em andamento</span>
+                        <strong>Tomoyo After • Edição em revisão</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section about" id="sobre">
+                <div class="section-heading">
+                    <span class="eyebrow">Sobre o projeto</span>
+                    <h2>O universo de Clannad, traduzido com alma.</h2>
+                </div>
+
+                <div class="about-grid">
+                    <article class="about-card">
+                        <h3>Tradução fiel</h3>
+                        <p>
+                            Cada diálogo é revisado para preservar o tom emocional, os detalhes da
+                            cultura japonesa e a essência das cenas mais marcantes.
+                        </p>
+                    </article>
+                    <article class="about-card">
+                        <h3>Qualidade de exibição</h3>
+                        <p>
+                            Edição, timing e cartas com cuidados especiais para garantir uma experiência
+                            fluida e agradável em qualquer plataforma.
+                        </p>
+                    </article>
+                    <article class="about-card">
+                        <h3>Comunidade ativa</h3>
+                        <p>
+                            O servidor é o espaço para discussões, lançamentos, ideias e interação com
+                            a equipe por trás da produção.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section release" id="episodios">
+                <div class="release-panel">
+                    <div class="section-heading release-heading">
+                        <span class="eyebrow">Episódios</span>
+                        <h2>Calendário de lançamento</h2>
+                    </div>
+
+                    <div class="timeline">
+                        <article class="episode-card">
+                            <span class="episode-number">01</span>
+                            <h3>O começo da primavera</h3>
+                            <p>Tomoya e Nagisa iniciam um caminho que mudará para sempre o rumo de suas vidas.</p>
+                        </article>
+                        <article class="episode-card">
+                            <span class="episode-number">02</span>
+                            <h3>O caminho para a felicidade</h3>
+                            <p>Novos laços surgem enquanto a amizade e a esperança ganham força no grupo.</p>
+                        </article>
+                        <article class="episode-card">
+                            <span class="episode-number">03</span>
+                            <h3>As pequenas jornadas</h3>
+                            <p>Momentos simples, mas profundamente significativos, revelam o coração da história.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section team" id="equipe">
+                <div class="section-heading">
+                    <span class="eyebrow">Equipe</span>
+                    <h2>Quem faz parte da produção</h2>
+                </div>
+
+                <div class="team-grid">
+                    <a class="team-card" href="dubladores.html">
+                        <span class="team-role">Dubladores</span>
+                        <h3>Yuki</h3>
+                    </a>
+                    <a class="team-card" href="editor.html">
+                        <span class="team-role">Editor</span>
+                        <h3>Haru</h3>
+                    </a>
+                    <a class="team-card" href="roteiristas.html">
+                        <span class="team-role">Roteiristas</span>
+                        <h3>Rin</h3>
+                    </a>
+                    <a class="team-card" href="revisores.html">
+                        <span class="team-role">Revisores</span>
+                        <h3>Mai</h3>
+                    </a>
+                </div>
+            </section>
+
+            <section class="section cta" id="discord">
+                <div class="cta-panel">
+                    <span class="eyebrow">Comunidade</span>
+                    <h2>Junte-se à nossa comunidade</h2>
+                    <p>
+                        Fique por dentro dos lançamentos, participe das discussões e acompanhe os bastidores
+                        da produção.
+                    </p>
+                    <a class="button button-primary" href="https://discord.gg/mNWJQAfmnJ">Acessar servidor</a>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
