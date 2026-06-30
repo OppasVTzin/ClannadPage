@@ -1,202 +1,411 @@
-html,body{
+html,
+body {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     padding: 0;
     margin: 0;
-    overflow:hidden;
-    
+    overflow-x: hidden;
+    background: #050505;
 }
 
-@media only screen and (max-width:1366px){
-body{
-    background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
-    background-color: black;
-    background-size: 50%;
-
-    
+body {
+    position: relative;
+    color: #f7f2e7;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
 
-#Logo{
-    margin: 100px 800px;
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 18% 18%, rgba(222, 180, 87, 0.4), transparent 14%),
+        radial-gradient(circle at 80% 20%, rgba(170, 37, 37, 0.35), transparent 14%),
+        linear-gradient(90deg, rgba(8, 6, 6, 0.94) 0%, rgba(8, 6, 6, 0.72) 42%, rgba(8, 6, 6, 0.56) 58%, rgba(8, 6, 6, 0.88) 100%);
+    z-index: -2;
 }
+
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: url('BG.jpg') center right / cover no-repeat;
+    opacity: 0.34;
+    filter: saturate(1.15) brightness(0.55) contrast(1.08);
+    z-index: -3;
 }
 
-@media only screen and (max-width:740px) and (orientation:landscape){
-    body{
-        background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
-        background-color: black;
-        background-size: 50%;
-    
-        
+.page {
+    width: min(1120px, calc(100vw - 64px));
+    margin: 0 auto;
+    padding-bottom: 72px;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 28px 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 180px;
+    filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.08));
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav a {
+    color: #f7f2e7;
+    text-decoration: none;
+    font-size: 0.98rem;
+    letter-spacing: 0.02em;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+    color: #f2d6a2;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    border-radius: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    background: linear-gradient(135deg, #d5a549, #a86e28);
+    color: #140d08;
+    box-shadow: 0 10px 30px rgba(213, 165, 73, 0.3);
+}
+
+.button-secondary,
+.button-outline {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: #f7f2e7;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 58px;
+    padding: 48px 0 56px;
+}
+
+.hero-copy {
+    max-width: 520px;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: #e0c079;
+}
+
+.eyebrow::before {
+    content: '';
+    width: 42px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e0c079);
+}
+
+.hero h1 {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(4.2rem, 10vw, 6.2rem);
+    line-height: 0.92;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    margin: 20px 0 0;
+    font-size: 1.18rem;
+    line-height: 1.65;
+    color: #d9d2c7;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 32px 0 42px;
+}
+
+.hero-metadata {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.hero-metadata li {
+    padding: 14px 16px;
+    background: linear-gradient(180deg, rgba(30, 24, 18, 0.55), rgba(20, 16, 12, 0.22));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+}
+
+.hero-metadata strong {
+    display: block;
+    font-size: 1.6rem;
+    color: #fff8ea;
+}
+
+.hero-metadata span {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #c4b593;
+}
+
+.hero-card {
+    padding: 16px;
+    background: linear-gradient(180deg, rgba(35, 28, 21, 0.72), rgba(20, 16, 12, 0.42));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+    box-shadow: 0 18px 70px rgba(0, 0, 0, 0.35);
+}
+
+.hero-card img {
+    display: block;
+    width: 100%;
+    border-radius: 22px;
+}
+
+.card-caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 8px 4px;
+}
+
+.card-caption span {
+    font-size: 0.68rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: #c7b28c;
+}
+
+.card-caption strong {
+    font-size: 0.88rem;
+}
+
+.section {
+    padding: 48px 0;
+}
+
+.section-heading {
+    max-width: 520px;
+    margin-bottom: 26px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.6rem, 6vw, 3.5rem);
+    line-height: 1.04;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.about-card,
+.team-card,
+.episode-card {
+    padding: 26px;
+    background: linear-gradient(180deg, rgba(28, 23, 19, 0.68), rgba(14, 12, 10, 0.42));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+}
+
+.team-card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.about-card p,
+.episode-card p,
+.cta p {
+    margin: 0;
+    line-height: 1.7;
+    color: #d9d3cb;
+}
+
+.release-panel {
+    padding: 28px;
+    background: linear-gradient(180deg, rgba(22, 17, 13, 0.6), rgba(14, 11, 9, 0.4));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+}
+
+.release-heading {
+    margin-bottom: 20px;
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.episode-number {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 0.66rem;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: #d5ad62;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.team-role {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.68rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #b5915d;
+}
+
+.cta-panel {
+    padding: 46px 24px;
+    text-align: center;
+    background: radial-gradient(circle at top, rgba(222, 180, 87, 0.25), transparent 30%),
+        linear-gradient(180deg, rgba(30, 23, 18, 0.78), rgba(18, 13, 10, 0.52));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+}
+
+.cta-panel h2 {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.4rem, 6vw, 3.2rem);
+}
+
+.cta-panel p {
+    width: min(540px, 100%);
+    margin: 16px auto 24px;
+}
+
+@media (max-width: 960px) {
+    .site-header {
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    
-    #Logo{
-        width: 50%;
-        margin: 100px 360px;
-    }
+
+    .nav {
+        width: 100%;
     }
 
-@media only screen and (max-width:915px) and (orientation:landscape){
-    body{
-            background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
-            background-color: black;
-            background-size: 50%;
-        
-            
-        }
-        
-    #Logo{
-            width: 50%;
-            margin: 100px 460px;
-        }
+    .nav ul {
+        justify-content: center;
+        gap: 22px;
     }
 
-@media only screen and (max-width:1024px) and (orientation:landscape){
-        body{
-            background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
-            background-color: black;
-            background-size: 60%;
-        
-            
-        }
-        
-        #Logo{
-            width: 50%;
-            margin: 256px 512px;
-        }
-        }
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding-top: 28px;
+    }
 
-@media only screen and (max-width:1180px) and (orientation:landscape){
-            body{
-                background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
-                background-color: black;
-                background-size: 60%;
-            
-                
-            }
-            
-            #Logo{
-                width: 50%;
-                margin: 256px 590px;
-            }
-            }
+    .hero-copy {
+        max-width: 100%;
+    }
 
-@media only screen and (max-width:1366px) and (orientation:landscape){
-                body{
-                    background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
-                    background-color: black;
-                    background-size: 70%;
-                
-                    
-                }
-                
-                #Logo{
-                    width: 50%;
-                    margin: 300px 683px;
-                }
-                }
+    .about-grid,
+    .timeline,
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
 
-@media only screen and (width:882px) and (orientation:landscape){
-                    body{
-                        background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
-                        background-color: black;
-                        background-size: 40%;
-                    
-                        
-                    }
-                    
-                    #Logo{
-                        width: 50%;
-                        margin: 100px 365px;
-                    }
-                    }
+@media (max-width: 640px) {
+    .page {
+        width: min(100vw - 36px, 1120px);
+    }
 
-@media only screen and (width:720px) and (orientation:landscape){
-                        body{
-                            background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
-                            background-color: black;
-                            background-size: 70%;
-                        
-                            
-                        }
-                        
-                        #Logo{
-                            width: 40%;
-                            margin: 100px 415px;
-                        }
-                        }
+    .site-header {
+        padding: 20px 0;
+    }
 
-@media only screen and (max-width:320px){
-                            body{
-                                background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
-                                background-color: black;
-                                background-size: 130%;
-                            
-                                
-                            }
-                            
-                            #Logo{
-                                width: 50%;
-                                margin: 10px 150px
-                            }
-                            }
+    .logo {
+        width: 140px;
+    }
 
-@media only screen and (max-width:425px){
-                                body{
-                                    background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
-                                    background-color: black;
-                                    background-size: 80%;
-                                
-                                    
-                                }
-                                
-                                #Logo{
-                                    width: 50%;
-                                    margin: 75px 180px;
-                                }
-                                }
-@media only screen and (max-width:768px){
-                                    body{
-                                        background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
-                                        background-color: black;
-                                        background-size: 40%;
-                                    
-                                        
-                                    }
-                                    
-                                    #Logo{
-                                        width: 50%;
-                                        margin: 75px 350px;
-                                    }
-                                    }
-@media only screen and (max-width:1024px){
-                                        body{
-                                            background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
-                                            background-color: black;
-                                            background-size: 30%;
-                                        
-                                            
-                                        }
-                                        
-                                        #Logo{
-                                            width: 50%;
-                                            margin: 75px 400px;
-                                        }
-                                        }
-@media only screen and (max-width:2400px) and (orientation:landscape){
-                                            body{
-                                                background: linear-gradient(to right,transparent 25%,black),url(BG.jpg) no-repeat;
-                                                background-color: black;
-                                                background-size: 50%;
-                                            
-                                                
-                                            }
-                                            
-                                            #Logo{
-                                                width: 50%;
-                                                margin: 100px 450px;
-                                            }
-                                            }  
-                    
-                        
-            
+    .nav ul {
+        gap: 14px 18px;
+        flex-wrap: wrap;
+    }
+
+    .button-outline {
+        width: 100%;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-metadata,
+    .about-grid,
+    .timeline,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 36px 0;
+    }
+
+    .release-panel {
+        padding: 20px;
+    }
+}
+
