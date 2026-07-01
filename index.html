@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto Clannad Fandub Oficial em português, com episódios, equipe, comunidade e bastidores da produção.">
+    <meta name="theme-color" content="#050505">
+
+    <!-- Metadados sociais melhoram o preview do link no Discord e redes sociais. -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Clannad Fandub Oficial">
+    <meta property="og:description" content="Uma jornada emocional em português, repleta de amizade, perdas e momentos que ficam no coração.">
+    <meta property="og:image" content="Logo.png">
+    <meta property="og:site_name" content="Clannad Fandub Oficial">
+
     <title>Clannad Fandub Oficial</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="page">
         <header class="site-header" id="topo">
             <a class="brand" href="#topo" aria-label="Clannad Fandub Oficial">
-                <img src="Logo.png" alt="Clannad Fandub Oficial" class="logo">
+                <img src="Logo.png" alt="Logo do Clannad Fandub Oficial" class="logo" width="400" height="155">
             </a>
 
             <nav class="nav" aria-label="Navegação principal">
@@ -26,16 +39,16 @@
         </header>
 
         <main>
-            <section class="hero" id="home">
+            <section class="hero" id="home" aria-labelledby="hero-title">
                 <div class="hero-copy">
                     <span class="eyebrow">Clannad · Fandub Oficial</span>
-                    <h1>Clannad</h1>
+                    <h1 id="hero-title">Clannad</h1>
                     <p class="subtitle">
                         Uma jornada emocional em português, repleta de amizade, perdas e momentos
                         que ficam no coração.
                     </p>
 
-                    <div class="hero-actions">
+                    <div class="hero-actions" aria-label="Ações principais">
                         <a class="button button-primary" href="#episodios">Assistir episódios</a>
                         <a class="button button-secondary" href="#equipe">Conhecer a equipe</a>
                     </div>
@@ -51,25 +64,25 @@
                         </li>
                         <li>
                             <strong>2026</strong>
-                            <span>Release</span>
+                            <span>Lançamento</span>
                         </li>
                     </ul>
                 </div>
 
-                <div class="hero-card" aria-label="Capa da produção Clannad Fandub">
-                    <img src="BG.jpg" alt="Ilustração de Clannad">
-                    <div class="card-caption">
+                <figure class="hero-card" aria-label="Capa da produção Clannad Fandub">
+                    <img src="BG.jpg" alt="Arte de Clannad usada como capa do projeto fandub" width="736" height="956">
+                    <figcaption class="card-caption">
                         <span>Projeto em andamento</span>
-                        <strong>Tomoyo After • Edição em revisão</strong>
-                    </div>
-                </div>
+                        <strong>Tomoyo After · Edição em revisão</strong>
+                    </figcaption>
+                </figure>
             </section>
 
-            <section class="section about" id="sobre">
-                <div class="section-heading">
+            <section class="section about" id="sobre" aria-labelledby="sobre-title">
+                <header class="section-heading">
                     <span class="eyebrow">Sobre o projeto</span>
-                    <h2>O universo de Clannad, traduzido com alma.</h2>
-                </div>
+                    <h2 id="sobre-title">O universo de Clannad, traduzido com alma.</h2>
+                </header>
 
                 <div class="about-grid">
                     <article class="about-card">
@@ -96,38 +109,44 @@
                 </div>
             </section>
 
-            <section class="section release" id="episodios">
+            <section class="section release" id="episodios" aria-labelledby="episodios-title">
                 <div class="release-panel">
-                    <div class="section-heading release-heading">
+                    <header class="section-heading release-heading">
                         <span class="eyebrow">Episódios</span>
-                        <h2>Calendário de lançamento</h2>
-                    </div>
+                        <h2 id="episodios-title">Calendário de lançamento</h2>
+                    </header>
 
                     <div class="timeline">
+                        <a href="https://watch.plex.tv/pt-BR/show/clannad/season/1">
                         <article class="episode-card">
                             <span class="episode-number">01</span>
                             <h3>O começo da primavera</h3>
                             <p>Tomoya e Nagisa iniciam um caminho que mudará para sempre o rumo de suas vidas.</p>
                         </article>
+                        </a>
+                        <a href="https://watch.plex.tv/pt-BR/show/clannad/season/1">
                         <article class="episode-card">
                             <span class="episode-number">02</span>
                             <h3>O caminho para a felicidade</h3>
                             <p>Novos laços surgem enquanto a amizade e a esperança ganham força no grupo.</p>
                         </article>
+                        </a>
+                        <a href="https://watch.plex.tv/pt-BR/show/clannad/season/1">
                         <article class="episode-card">
                             <span class="episode-number">03</span>
                             <h3>As pequenas jornadas</h3>
                             <p>Momentos simples, mas profundamente significativos, revelam o coração da história.</p>
                         </article>
+                        </a>
                     </div>
                 </div>
             </section>
 
-            <section class="section team" id="equipe">
-                <div class="section-heading">
+            <section class="section team" id="equipe" aria-labelledby="equipe-title">
+                <header class="section-heading">
                     <span class="eyebrow">Equipe</span>
-                    <h2>Quem faz parte da produção</h2>
-                </div>
+                    <h2 id="equipe-title">Quem faz parte da produção</h2>
+                </header>
 
                 <div class="team-grid">
                     <a class="team-card" href="dubladores.html">
@@ -149,18 +168,23 @@
                 </div>
             </section>
 
-            <section class="section cta" id="discord">
+            <section class="section cta" id="discord" aria-labelledby="discord-title">
                 <div class="cta-panel">
                     <span class="eyebrow">Comunidade</span>
-                    <h2>Junte-se à nossa comunidade</h2>
+                    <h2 id="discord-title">Junte-se à nossa comunidade</h2>
                     <p>
                         Fique por dentro dos lançamentos, participe das discussões e acompanhe os bastidores
                         da produção.
                     </p>
-                    <a class="button button-primary" href="https://discord.gg/mNWJQAfmnJ">Acessar servidor</a>
+                    <a class="button button-primary" href="https://discord.gg/mNWJQAfmnJ" target="_blank" rel="noopener noreferrer">Acessar servidor</a>
                 </div>
             </section>
         </main>
+
+        <footer class="site-footer">
+            <p>Clannad Fandub Oficial · Projeto feito por fãs.</p>
+        </footer>
     </div>
 </body>
+
 </html>
