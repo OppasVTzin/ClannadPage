@@ -118,6 +118,17 @@ img {
     filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.08));
 }
 
+.acess_personagem a{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+}
 .nav ul {
     display: flex;
     align-items: center;
